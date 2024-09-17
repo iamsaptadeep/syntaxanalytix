@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KisanMart Store</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+
+         .navcl {
+    background-color: #00712D;
+   }
+
+        /* Product Card Styling */
+        .product-card {
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+
+        .product-img {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        /* Sidebar Styling */
+        .sidebar {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .sidebar h4 {
+            margin-bottom: 20px;
+        }
+
+        .sidebar label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        /* Navbar Signed-in User Styling */
+        .navbar-brand {
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .navbar-nav .nav-link {
+            color: #fff;
+        }
+
+        .user-profile {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        @media (max-width: 768px) {
+            .product-img {
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top navcl">
+        <div class="container">
+            <a class="navbar-brand" href="#">KisanMart</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Orders</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <!-- Signed-in User Logo -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <img src="./assets/prf.jpg" class="user-profile" alt="User Profile">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Store Layout -->
+    <div class="container mt-5 pt-5">
+        <div class="row">
+            <!-- Sidebar Filters -->
+            <div class="col-lg-3">
+                <div class="sidebar">
+                    <h4>Filters</h4>
+                    <label><input type="checkbox"> Organic</label>
+                    <label><input type="checkbox"> Fresh</label>
+                    <label><input type="checkbox"> Vegetables</label>
+                    <label><input type="checkbox"> Fruits</label>
+                    <label><input type="checkbox"> Price Range: ₹1000 - ₹3000</label>
+                    <label><input type="checkbox"> Price Range: ₹3000 - ₹5000</label>
+                </div>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="col-lg-9">
+                <div class="row">
+                    <!-- Example Product Card with Offer Price and Highest Bid -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card product-card">
+                            <img src="./assets/wheat.png" class="card-img-top product-img"
+                                alt="Product 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Wheat</h5>
+                                <p class="card-text">₹2000.00</p>
+                                <p>Highest Bid: <strong>₹2500.00</strong></p>
+
+                                <!-- Offer Price Input -->
+                                <div class="mb-3">
+                                    <label for="offerPrice1" class="form-label">Your Offer Price:</label>
+                                    <input type="number" class="form-control" id="offerPrice1"
+                                        placeholder="Enter your offer price">
+                                </div>
+
+                                <a href="#" class="btn btn-primary">Submit Offer</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Example Product Card -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card product-card">
+                            <img src="./assets/potato.jpg" class="card-img-top product-img"
+                                alt="Product 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Organic Potatoes</h5>
+                                <p class="card-text">₹150.00</p>
+                                <p>Highest Bid: <strong>₹130.00</strong></p>
+
+                                <!-- Offer Price Input -->
+                                <div class="mb-3">
+                                    <label for="offerPrice2" class="form-label">Your Offer Price:</label>
+                                    <input type="number" class="form-control" id="offerPrice2"
+                                        placeholder="Enter your offer price">
+                                </div>
+
+                                <a href="#" class="btn btn-primary">Submit Offer</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Example Product Card -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card product-card">
+                            <img src="./assets/paddy.jpg" class="card-img-top product-img"
+                                alt="Product 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Paddy</h5>
+                                <p class="card-text">₹1200.00</p>
+                                <p>Highest Bid: <strong>₹1500.00</strong></p>
+
+                                <!-- Offer Price Input -->
+                                <div class="mb-3">
+                                    <label for="offerPrice3" class="form-label">Your Offer Price:</label>
+                                    <input type="number" class="form-control" id="offerPrice3"
+                                        placeholder="Enter your offer price">
+                                </div>
+
+                                <a href="#" class="btn btn-primary">Submit Offer</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mb-4">
+                        <div class="card product-card">
+                            <img src="./assets/jowar.jpg" class="card-img-top product-img" alt="Product 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Jowar</h5>
+                                <p class="card-text">₹1100.00</p>
+                                <p>Highest Bid: <strong>₹1000.00</strong></p>
+                    
+                                <!-- Offer Price Input -->
+                                <div class="mb-3">
+                                    <label for="offerPrice2" class="form-label">Your Offer Price:</label>
+                                    <input type="number" class="form-control" id="offerPrice2" placeholder="Enter your offer price">
+                                </div>
+                    
+                                <a href="#" class="btn btn-primary">Submit Offer</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mb-4">
+                        <div class="card product-card">
+                            <img src="./assets/seeds.jpg" class="card-img-top product-img" alt="Product 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Sunflower Seed</h5>
+                                <p class="card-text">₹500.00</p>
+                                <p>Highest Bid: <strong>₹600.00</strong></p>
+                    
+                                <!-- Offer Price Input -->
+                                <div class="mb-3">
+                                    <label for="offerPrice2" class="form-label">Your Offer Price:</label>
+                                    <input type="number" class="form-control" id="offerPrice2" placeholder="Enter your offer price">
+                                </div>
+                    
+                                <a href="#" class="btn btn-primary">Submit Offer</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mb-4">
+                        <div class="card product-card">
+                            <img src="./assets/barley.jpg" class="card-img-top product-img" alt="Product 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Barley</h5>
+                                <p class="card-text">₹1050.00</p>
+                                <p>Highest Bid: <strong>₹1300.00</strong></p>
+                    
+                                <!-- Offer Price Input -->
+                                <div class="mb-3">
+                                    <label for="offerPrice2" class="form-label">Your Offer Price:</label>
+                                    <input type="number" class="form-control" id="offerPrice2" placeholder="Enter your offer price">
+                                </div>
+                    
+                                <a href="#" class="btn btn-primary">Submit Offer</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="navcl py-5 text-white">
+        <div class="container">
+            <p>&copy; 2024 KisanMart. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
